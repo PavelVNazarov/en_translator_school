@@ -82,4 +82,7 @@ def static_files_generator():
             yield 'static_files', {'filename': rel_path}
 
 if __name__ == '__main__':
-    freezer.freeze()
+    if len(sys.argv) > 1 and sys.argv[1] == 'build':
+        freezer.freeze()
+    else:
+        app.run(debug=True)
