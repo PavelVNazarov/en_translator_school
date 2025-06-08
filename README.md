@@ -47,17 +47,20 @@ Frozen-Flask (генерация статических файлов)
 Установка и запуск
 Клонируйте репозиторий:
 
-bash
 git clone https://github.com/ваш-username/school-english.git
+
 cd school-english
+
 Установите зависимости:
 
-bash
+
 pip install flask flask-frozen
+
 Запустите генерацию статического сайта:
 
-bash
+
 python app.py
+
 Сгенерированный сайт будет находиться в папке docs/
 
 Размещение на GitHub Pages
@@ -68,19 +71,31 @@ python app.py
 В настройках репозитория включите GitHub Pages для ветки main
 
 Структура проекта
-text
+
 school-english/
+
 ├── app.py                 # Flask приложение
+
 ├── texts.json             # Текстовое содержимое сайта
+
 ├── static/
+
 │   ├── css/
+
 │   │   └── style.css      # Основные стили
+
 │   ├── images/            # Все изображения сайта
+
 │   ├── audio/             # Аудио файлы
+
 │   └── js/
+
 │       └── script.js      # JavaScript для теста и форм
+
 ├── templates/             # HTML шаблоны
+
 └── docs/                  # Сгенерированный статический сайт
+
 Автор
 Иванова Мария Петровна
 Группа: Л-123
