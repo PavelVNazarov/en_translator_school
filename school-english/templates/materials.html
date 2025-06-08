@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="materials-section">
+    <h1>{{ texts.title }}</h1>
+    
+    <div class="materials-grid">
+        {% for resource in texts.resources %}
+        <div class="material-card">
+            {% if resource.type == "website" %}
+            <i class="fas fa-globe"></i>
+            <h2>{{ resource.title }}</h2>
+            <p>{{ resource.description }}</p>
+            <a href="{{ resource.url }}" target="_blank" class="btn">Перейти</a>
+            
+            {% elif resource.type == "text" %}
+            <i class="fas fa-file-alt"></i>
+            <h2>{{ resource.title }}</h2>
+            <p>{{ resource.content }}</p>
+            
+            {% elif resource.type == "image" %}
+            <i class="fas fa-image"></i>
+            <h2>{{ resource.title }}</h2>
+            <img src="{{ url_for('static', filename='images/' + resource.file) }}" alt="{{ resource.title }}">
+            
+            {% elif resource.type == "holiday" %}
+            <i class="fas fa-holly-berry"></i>
+            <h2>{{ resource.title }}</h2>
+            <p>{{ resource.description }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
