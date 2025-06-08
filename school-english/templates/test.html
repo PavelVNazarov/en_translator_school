@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="test-section">
+    <h1>{{ texts.title }}</h1>
+    
+    <form id="english-test">
+        {% for question in texts.questions %}
+        <div class="question">
+            <p>{{ loop.index }}. {{ question.question }}</p>
+            <div class="options">
+                {% for option in question.options %}
+                <label>
+                    <input type="radio" name="q{{ loop.index0 }}" value="{{ loop.index0 }}">
+                    {{ option }}
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        
+        <button type="submit" class="btn">Проверить результаты</button>
+    </form>
+    
+    <div id="result" class="hidden">
+        <h2>Ваш результат:</h2>
+        <p id="result-text"></p>
+        <p>Рекомендуем записаться на <a href="contacts.html">бесплатный пробный урок</a> для более точного определения уровня.</p>
+    </div>
+</section>
+{% endblock %}
