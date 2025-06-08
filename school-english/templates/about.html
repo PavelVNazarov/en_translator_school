@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-section">
+    <h1>{{ texts.title }}</h1>
+    
+    <article>
+        <h2>Наша история</h2>
+        <p>{{ texts.history }}</p>
+    </article>
+    
+    <article>
+        <h2>Методика обучения</h2>
+        <p>{{ texts.methods }}</p>
+    </article>
+    
+    <article>
+        <h2>Уровни обучения</h2>
+        <div class="levels-grid">
+            {% for level in texts.levels %}
+            <div class="level-card">
+                <h3>{{ level.name }}</h3>
+                <p>{{ level.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+    
+    <div class="gallery">
+        <img src="{{ url_for('static', filename='images/class1.jpg') }}" alt="Класс">
+        <img src="{{ url_for('static', filename='images/class2.jpg') }}" alt="Занятие">
+        <img src="{{ url_for('static', filename='images/class3.jpg') }}" alt="Библиотека">
+    </div>
+</section>
+{% endblock %}
