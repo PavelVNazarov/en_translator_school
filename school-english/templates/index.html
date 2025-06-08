@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ texts.slogan }}</h1>
+        <p>{{ texts.description }}</p>
+        <a href="test.html" class="btn">Пройти тест на уровень</a>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Почему выбирают нас?</h2>
+    <div class="features-grid">
+        {% for feature in texts.features %}
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <p>{{ feature }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Готовы начать обучение?</h2>
+    <p>Запишитесь на бесплатный пробный урок прямо сейчас!</p>
+    <a href="contacts.html" class="btn">Записаться</a>
+</section>
+{% endblock %}
