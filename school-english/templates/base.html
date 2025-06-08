@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaMaster - {{ texts.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>LinguaMaster</h1>
+            <p>Школа английского языка</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О школе</a></li>
+                <li><a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Преподаватели</a></li>
+                <li><a href="test.html"><i class="fas fa-question-circle"></i> Тест</a></li>
+                <li><a href="materials.html"><i class="fas fa-book"></i> Материалы</a></li>
+                <li><a href="contacts.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                <li><a href="portfolio.html"><i class="fas fa-images"></i> Портфолио</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Школа английского языка "LinguaMaster". Все права защищены.</p>
+        <p>Создатель: Иванова Мария, группа Л-123, Институт иностранных языков</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
