@@ -47,7 +47,7 @@ Frozen-Flask (генерация статических файлов)
 Установка и запуск
 Клонируйте репозиторий:
 
-git clone https://github.com/ваш-username/school-english.git
+git clone https://pavelvnazarov.github.io/en_translator_school/index.html
 
 cd school-english
 
