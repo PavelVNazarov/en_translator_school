@@ -1,3 +1,5 @@
+https://pavelvnazarov.github.io/en_translator_school/   - ссылка на этот сайт
+
 Структура проекта
 school-english/
 ├── app.py                 # Flask приложение для генерации статического сайта
