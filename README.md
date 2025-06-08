@@ -1,5 +1,5 @@
 Школа английского языка "LinguaMaster"
-https://static/images/hero-bg.jpg](https://pavelvnazarov.github.io/en_translator_school/
+https://pavelvnazarov.github.io/en_translator_school/
 
 Статический сайт школы английского языка, созданный в рамках учебного проекта. Сайт включает 6 страниц с информацией о школе, преподавателях, тестом на определение уровня, дополнительными материалами и контактами.
 
