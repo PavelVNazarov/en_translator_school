@@ -6,9 +6,10 @@ from flask_frozen import Freezer
 app = Flask(__name__)
 
 # Конфигурация для Frozen-Flask (генерация статического сайта)
+# Конфигурация для GitHub Pages
 app.config['FREEZER_DESTINATION'] = 'docs'
-app.config['FREEZER_RELATIVE_URLS'] = True
-app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+app.config['FREEZER_RELATIVE_URLS'] = False
+app.config['FREEZER_BASE_URL'] = '/' 
 freezer = Freezer(app)
 
 def load_texts():
