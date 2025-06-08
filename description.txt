@@ -1,0 +1,21 @@
+Структура проекта
+school-english/
+├── app.py                 # Flask приложение для генерации статического сайта
+├── texts.json             # Текстовое содержимое сайта
+├── static/
+│   ├── css/
+│   │   └── style.css      # Основные стили
+│   ├── images/            # Все изображения сайта
+│   ├── audio/             # Аудио файлы
+│   └── js/
+│       └── script.js      # JavaScript для теста и форм
+├── templates/
+│   ├── base.html          # Базовый шаблон
+│   ├── index.html         # Главная страница
+│   ├── about.html         # О школе
+│   ├── teachers.html      # Преподаватели
+│   ├── test.html          # Тест на уровень
+│   ├── materials.html     # Дополнительные материалы
+│   ├── contacts.html      # Контакты
+│   └── portfolio.html     # Портфолио
+└── docs/                  # Сгенерированный статический сайт (для GitHub Pages)
